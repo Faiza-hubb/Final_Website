@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Journey | Replicated Graphs</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">ANTIBODY JOURNAL</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About & Paper</a></li>
+            <li><a href="model.html">The ODE Model</a></li>
+            <li><a href="graphs.html" class="active">Replicated Graphs</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-container">
+        <div class="story-panel">
+            <h2>Baseline Model Trajectories</h2>
+            <p>This simulation provides a means to predict long-term NAb concentrations, guiding decisions about whether and when a booster vaccination may be warranted[cite: 57].</p>
+            <img src="static/images/WhatsApp Image 2026-06-24 at 10.52.04 PM.jpeg" class="display-image" alt="Baseline Trajectories">
+        </div>
+
+        <div class="story-panel">
+            <h2>Sensitivity Analysis</h2>
+            <img src="static/images/WhatsApp Image 2026-06-24 at 10.51.24 PM.jpeg" class="display-image" alt="Sensitivity Analysis">
+            <p style="text-align: center; color: var(--text-muted);">Systematic variation of the decay scale ($r_4$) testing stability behaviors.</p>
+        </div>
+
+        <div class="story-panel">
+            <h2>Algorithmic Evaluation: Explicit Euler vs. MATLAB ode45</h2>
+            <img src="static/images/WhatsApp Image 2026-06-24 at 10.45.03 PM.jpeg" class="display-image" alt="Solver Comparison">
+            <img src="static/images/WhatsApp Image 2026-06-24 at 10.49.12 PM.jpeg" class="display-image" alt="Numerical Error Profile">
+            <p style="text-align: center; color: var(--text-muted);">Convergence profiles tracking absolute numerical errors between custom solvers and standard MATLAB parameters.</p>
+        </div>
+    </div>
+</body>
+</html>

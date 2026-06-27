@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey | ODE Model Derivation</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">ANTIBODY JOURNAL</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About & Paper</a></li>
+            <li><a href="model.html" class="active">The ODE Model</a></li>
+            <li><a href="graphs.html">Replicated Graphs</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-container">
+        <div class="story-panel reveal">
+            <h2>Translating Kinetics to Systems of Equations</h2>
+            <p>The model contains two systems of Ordinary Differential equations dependent on two main time-dependent state variables:</p>
+            <ul style="margin-left: 20px; margin-bottom: 20px; color: var(--text-muted);">
+                <li><strong>\( A(t) \):</strong> Nab concentrations representing the functional antibodies the body produces in response to the mRNA viruses (IU/ml).</li>
+                <li><strong>\( V(t) \):</strong> A mathematical proxy representing the population of transfected host cells expressing the recombinant spike protein.</li>
+            </ul>
+
+            <h3 style="color: var(--accent-teal); margin-top: 20px;">Model Assumptions</h3>
+            <ul style="margin-left: 20px; margin-bottom: 20px; color: var(--text-muted);">
+                <li>\( V(t) \) is a temporary trigger that does not replicate.</li>
+                <li>The body removes transfected cells using the Michaelis-Menten rate.</li>
+                <li>\( A(t) \) multiplies to its carry capacity and then declines over time.</li>
+                <li>Sex does not affect the equations.</li>
+                <li>At the time of the second dose, it is added to any existing leftover dose.</li>
+            </ul>
+            
+            <div style="background: #11161e; padding: 25px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--accent-blue);">
+                <h3 style="color: var(--accent-blue); margin-bottom: 10px;">Equation 1: Antibody Concentration (\( A \))</h3>
+                $$ \frac{dA}{dt} = r_1V + r_2AV + A(r_3 - r_4A) $$
+                <p style="font-size: 0.95rem; margin-top: 10px; color: var(--text-muted);">
+                    <strong>Rate In:</strong> \( r_1V + r_2AV + r_3A \) (Making new antibodies from the initial trigger, the booster effect, and natural growth).<br>
+                    <strong>Rate Out:</strong> \( r_4A^2 \) (Antibodies naturally dying off as they become crowded in the blood).
+                </p>
+            </div>
+
+            <div style="background: #11161e; padding: 25px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--accent-crimson);">
+                <h3 style="color: var(--accent-crimson); margin-bottom: 10px;">Equation 2: Transfected Cells (\( V \))</h3>
+                $$ \frac{dV}{dt} = \alpha u(t) - \frac{k_1V}{k_2+V} $$
+                <p style="font-size: 0.95rem; margin-top: 10px; color: var(--text-muted);">
+                    <strong>Rate In:</strong> \( \alpha u(t) \) (The dose of vaccine cells added directly into the patients’ bodies).<br>
+                    <strong>Rate Out:</strong> \( \frac{k_1V}{k_2+V} \) (The body's immune system clearing the vaccine cells over time).
+                </p>
+            </div>
+
+            <div style="text-align: right; margin-top: 30px;">
+                <a href="graphs.html" class="action-btn">Next: View Replicated Figures</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 DE Project Submission | Ashesi University</p>
+    </footer>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey | Biology & Reference Paper</title>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        /* Specific Styles for the Cartoon Storyboard Journey */
+        .storyboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .comic-card {
+            background: #1c2530;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .comic-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-teal);
+        }
+        .comic-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .comic-step {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--accent-blue);
+            color: var(--bg-main);
+            font-weight: bold;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gender-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin: 3px;
+            font-weight: bold;
+        }
+        .badge-f { background: #ff7675; color: #fff; }
+        .badge-m { background: #74b9ff; color: #bg-main; }
+        .badge-p { background: #a29bfe; color: #fff; }
+        .badge-m-vac { background: #00cec9; color: #bg-main; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">ANTIBODY JOURNAL</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About & Paper</a></li>
+            <li><a href="model.html">The ODE Model</a></li>
+            <li><a href="graphs.html">Replicated Graphs</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-container">
+        <div class="story-panel reveal">
+            <h2>The Biological Background</h2>
+            <p>Immunity is the body's ability to fight diseases or infections caused by internal or external factors or organisms[cite: 43]. The body does this with the help of neutralizing and non-neutralizing antibodies[cite: 44]. These antibodies develop in response to infection and vaccination, therefore providing protection (dePillis et al., 2023)[cite: 45].</p>
+            
+            <p>During the 2020 COVID-19 outbreak, vaccines were developed by companies such as Moderna, Pfizer, and Johnson & Johnson[cite: 49]. Specifically, Pfizer and Moderna vaccines are mRNA vaccines because, instead of containing weakened viruses like most vaccines, they introduce a synthetic messenger RNA strand to the individual’s body[cite: 50].</p>
+            
+            <div class="animation-box">
+                <div class="antibody-graphic">💉 ➔ 🧬 ➔ 🛡️</div>
+                <p><strong style="color: var(--accent-teal);">Visual Pathway:</strong> The mRNA vaccines are made from a recombinant SARS-CoV-2 spike protein[cite: 52]. The body identifies this as foreign and produces neutralizing antibodies (NAb) that bind to or attack it[cite: 53].</p>
+            </div>
+
+            <p>The neutralizing antibodies produced inhibit the binding of ACE2 to the spike protein of SARS-CoV-2[cite: 54]. Hence, there is a need to study how the concentrations of these NAbs affect the body’s response to the virus over time[cite: 55].</p>
+        </div>
+
+        <div class="story-panel reveal">
+            <h2>The 180-Day Clinical Trial Journey</h2>
+            <p>Follow the visual step-by-step breakdown of how the raw data from the <em>dePillis et al. (2023)</em> study was organized and structured[cite: 56]:</p>
+
+            <div class="storyboard">
+                <div class="comic-card">
+                    <span class="comic-step">1</span>
+                    <span class="comic-icon">👥</span>
+                    <h3>The Cohort</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px;">32 Healthy, COVID-naive individuals tracked continuously over months[cite: 71, 75].</p>
+                    <span class="gender-badge badge-f">21 Females 👩</span>
+                    <span class="gender-badge badge-m">11 Males 👨</span>
+                </div>
+
+                <div class="comic-card">
+                    <span class="comic-step">2</span>
+                    <span class="comic-icon">🧪</span>
+                    <h3>The Vaccines</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px;">The selection split between the two dominant mRNA variants[cite: 72].</p>
+                    <span class="gender-badge badge-m-vac">22 Moderna 💉</span>
+                    <span class="gender-badge badge-p">10 Pfizer 💉</span>
+                </div>
+
+                <div class="comic-card">
+                    <span class="comic-step">3</span>
+                    <span class="comic-icon">🗓️</span>
+                    <h3>Dosing Plan</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">A standard two-dose regimen administered at specific intervals[cite: 73]:</p>
+                    <p style="color: var(--accent-teal); font-weight: bold; margin-top: 5px;">Day 0: Initial Shot<br>Day 28: Booster Spiker</p>
+                </div>
+
+                <div class="comic-card">
+                    <span class="comic-step">4</span>
+                    <span class="comic-icon">🩸</span>
+                    <h3>Testing (Aditxt)</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Repeated blood draws check binding inhibition performance[cite: 66, 67].</p>
+                    <p style="color: var(--accent-crimson); font-weight: bold; margin-top: 5px;">0% (No Cover)<br>➔ 100% (Total Block)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="story-panel reveal">
+            <h2>Patient Data Calibration Curve</h2>
+            <p>To keep calculations unified across international medical labs, the calculated percentage inhibition from the clinical timeline is systematically mapped directly to standardized international concentration values[cite: 69].</p>
+            <img src="static/images/WhatsApp Image 2026-06-24 at 10.54.26 PM.jpeg" class="display-image" alt="Calibration Curve">
+            <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem;"><strong>Figure 1:</strong> Polynomial Fit curve mapping experimental blocking scores directly into medical standard \( \text{IU/mL} \) volumes.</p>
+            
+            <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                <p style="margin-bottom: 15px; color: var(--text-muted);">Want to dive deeper into the clinical data and methodology?</p>
+                <a href="https://www.sciencedirect.com/science/article/pii/S0022519322002715" target="_blank" class="action-btn" style="background: transparent; border: 2px solid var(--accent-teal); color: var(--accent-teal); box-shadow: none;">📄 Read the Original Research Paper</a>
+            </div>
+
+            <div style="text-align: right; margin-top: 40px;">
+                <a href="model.html" class="action-btn">Next: Advance to the Mathematical Model</a>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 DE Project Submission | Ashesi University</p>
+    </footer>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
